@@ -17,7 +17,7 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 
   .form input[type="text"] {
