@@ -18,18 +18,18 @@ form.addEventListener("submit", (e) => {
   clearGallery();
   showLoader();
 
-  getImagesByQuery(query)
-    .then(data => {
-      if (data.hits.length === 0) {
-        iziToast.info({
-          title: "No Results",
-          message: "Sorry, there are no images matching your search query. Please try again!",
-          position: "topRight"
-        });
-        return;
-      }
-      createGallery(data.hits);
-    })
+ getImagesByQuery(query)
+  .then(images => {
+    if (images.length === 0) {
+      iziToast.info({
+        title: "No Results",
+        message: "Sorry, there are no images matching your search query. Please try again!",
+        position: "topRight"
+      });
+      return;
+    }
+    createGallery(images);
+  })
     .catch(error => {
       iziToast.error({
         title: "Error",
