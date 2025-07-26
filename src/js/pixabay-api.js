@@ -1,3 +1,4 @@
+// замінено на axios
 import axios from "axios";
 
 const API_KEY = "51425733-ebfe71f47e07541f439d053d0";
